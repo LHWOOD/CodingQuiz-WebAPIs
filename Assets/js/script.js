@@ -29,18 +29,18 @@ var questions = [
 var timer = document.querySelector("#timer");
 
 function countdown() {
-  var timeLeft = 60;
+  var timeLeft = 10;
   var timeInterval = setInterval(function () {
     timeLeft--;
     timer.textContent = "Time: " + timeLeft + "s";
   }, 1000);
 }
 
-// countdown();
 var startButton = document.querySelector("#start");
-// function startGame() {
-//     var start = document.addEventListener("click", function())
-// }
+
 startButton.addEventListener("click", function () {
+  if (timeLeft === 0) {
+    clearInterval(timeInterval);
+  }
   countdown();
 });
