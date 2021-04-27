@@ -1,3 +1,4 @@
+//declared variables
 var questions = [
   {
     question: "Which of the following is not a commonly used data type?",
@@ -31,6 +32,7 @@ var timeLeft = 3;
 var main = document.querySelector("main");
 var quizContent;
 
+//starts the timer when button clicked
 function countdown() {
   var timeInterval = setInterval(function () {
     timeLeft--;
@@ -43,11 +45,18 @@ function countdown() {
 
 startButton.addEventListener("click", function () {
   countdown();
-  //   startGame();
+  // startGame();
 });
 
-function startGame() {}
+//after button pressed, firts question appears
+// function startGame() {
+//   main.textContent("style", "display: hidden");
+// }
 
 // for(var i = 0; i < questions.length; i++) {
 //     var nextQuestion =
 // }
+
+//action for wrong or right question
+
+//game over - score totals
