@@ -25,22 +25,29 @@ var questions = [
     answer: "for loop",
   },
 ];
-
+var startButton = document.querySelector("#start");
 var timer = document.querySelector("#timer");
+var timeLeft = 3;
+var main = document.querySelector("main");
+var quizContent;
 
 function countdown() {
-  var timeLeft = 10;
   var timeInterval = setInterval(function () {
     timeLeft--;
     timer.textContent = "Time: " + timeLeft + "s";
+    if (timeLeft === 0) {
+      clearInterval(timeInterval);
+    }
   }, 1000);
 }
 
-var startButton = document.querySelector("#start");
-
 startButton.addEventListener("click", function () {
-  if (timeLeft === 0) {
-    clearInterval(timeInterval);
-  }
   countdown();
+  //   startGame();
 });
+
+function startGame() {}
+
+// for(var i = 0; i < questions.length; i++) {
+//     var nextQuestion =
+// }
