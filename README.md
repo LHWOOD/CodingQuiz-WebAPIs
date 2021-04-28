@@ -13,7 +13,7 @@ No installation required for this web application.
 Link to website:
 https://lhwood.github.io/CodingQuiz-WebAPIs/
 
-`md ![screenshot](Assets/images/screenshot.png) `
+![screenshot](Assets/images/screenshot.png)
 
 ## Credits
 
