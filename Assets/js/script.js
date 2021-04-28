@@ -30,8 +30,9 @@ var startButton = document.querySelector("#start");
 var timer = document.querySelector("#timer");
 var timeLeft = 3;
 var main = document.querySelector("main");
-var quizContent;
-
+var startQuiz = document.querySelector("#startquiz");
+var questionEl = document.getElementById("questions");
+// var quizQuestion = document.getElementById("#question");
 //starts the timer when button clicked
 function countdown() {
   var timeInterval = setInterval(function () {
@@ -45,13 +46,24 @@ function countdown() {
 
 startButton.addEventListener("click", function () {
   countdown();
-  // startGame();
+  startGame();
+  getQuestions();
 });
 
-//after button pressed, firts question appears
-// function startGame() {
-//   main.textContent("style", "display: hidden");
-// }
+//after button pressed
+function startGame() {
+  console.log("here");
+  startquiz.setAttribute("class", "hide");
+  startButton.setAttribute("class", "hide");
+  questionEl.removeAttribute("class");
+}
+//firts question appears
+
+function getQuestions() {
+  var quizQuestion = document.getElementById("question");
+  quizQuestion.textContent = questions[0].question;
+  console.log(quizQuestion);
+}
 
 // for(var i = 0; i < questions.length; i++) {
 //     var nextQuestion =
