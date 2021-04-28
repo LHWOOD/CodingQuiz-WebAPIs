@@ -41,3 +41,10 @@ header {
 .hide {
   display: none;
 }
+
+h2 {
+  margin-right: 250px;
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: bold;
+}

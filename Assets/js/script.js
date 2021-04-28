@@ -28,11 +28,12 @@ var questions = [
 ];
 var startButton = document.querySelector("#start");
 var timer = document.querySelector("#timer");
-var timeLeft = 3;
-var main = document.querySelector("main");
+var timeLeft = 60;
+// var main = document.querySelector("main");
 var startQuiz = document.querySelector("#startquiz");
 var questionEl = document.getElementById("questions");
-// var quizQuestion = document.getElementById("#question");
+var quizQuestion = document.getElementById("#question");
+
 //starts the timer when button clicked
 function countdown() {
   var timeInterval = setInterval(function () {
@@ -52,12 +53,11 @@ startButton.addEventListener("click", function () {
 
 //after button pressed
 function startGame() {
-  console.log("here");
-  startquiz.setAttribute("class", "hide");
+  startQuiz.setAttribute("class", "hide");
   startButton.setAttribute("class", "hide");
   questionEl.removeAttribute("class");
 }
-//firts question appears
+//first question appears
 
 function getQuestions() {
   var quizQuestion = document.getElementById("question");
