@@ -61,8 +61,10 @@ function startGame() {
 
 function getQuestions() {
   var quizQuestion = document.getElementById("question");
+  var quizChoices = document.getElementById("choices");
   quizQuestion.textContent = questions[0].question;
-  console.log(quizQuestion);
+  quizChoices.textContent = questions[0].choices;
+  quizQuestion.setAttribute("style", "color:blue");
 }
 
 // for(var i = 0; i < questions.length; i++) {
